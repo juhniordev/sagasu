@@ -1,0 +1,10 @@
+services:
+  python:
+    build:
+      context: ./python
+      dockerfile: Dockerfile
+    image: python:3.13
+    container_name: sagasu-python
+    volumes:
+      - ./python:/scrapper
+    command: python main.py
